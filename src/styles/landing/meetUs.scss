@@ -1,0 +1,31 @@
+.meet-us {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.meet-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 40px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.facilities-image {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

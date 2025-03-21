@@ -1,0 +1,28 @@
+.footer {
+  background: linear-gradient(135deg, #336291, #106fce);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #007bff;
+  
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  
+    nav {
+      margin-top: 10px;
+  
+      a {
+        color: #f1c40f;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 0.9rem;
+  
+        &:hover {
+          text-decoration: underline;
+          color: #ffdd57;
+        }
+      }
+    }
+  }  
