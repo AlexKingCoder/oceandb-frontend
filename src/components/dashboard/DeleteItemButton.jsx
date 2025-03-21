@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../../styles/dashboard/DeleteItemButton.scss";
+import "../../styles/dashboard/deleteItemButton.scss";
 
 const DeleteItemButton = ({ activeTab, itemId, onDeleteSuccess }) => {
   const [userRole, setUserRole] = useState(null);
