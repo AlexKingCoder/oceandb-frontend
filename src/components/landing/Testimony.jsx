@@ -6,7 +6,7 @@ const testimonies = [
     name: "Lucía Saval",
     role: "Cliente",
     stars: "⭐⭐⭐⭐⭐",
-    text: "Mi trabajo es muy exigente,pero cada vez que descanso en el spa del hotel me quedo como nueva. 100% recomendado."
+    text: "Mi trabajo es muy exigente, pero cada vez que descanso en el spa del hotel me quedo como nueva. 100% recomendado."
   },
   {
     name: "Gema Olivares",
