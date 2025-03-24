@@ -51,7 +51,7 @@ const CreateItemModal = ({ activeTab, onClose, onCreate, userRole }) => {
         url = "https://oceandb-server.vercel.app/api/v1/servicios/register";
         break;
       case "servicio_reserva":
-        url = "https://oceandb-server.vercel.app/api/v1/servicio_reserva/register";
+        url = "https://oceandb-server.vercel.app/api/v1/servicios_reservas/register";
         break;
       case "facturas":
         url = "https://oceandb-server.vercel.app/api/v1/facturas/register";
