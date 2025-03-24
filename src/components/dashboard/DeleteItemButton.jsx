@@ -30,7 +30,7 @@ const DeleteItemButton = ({ activeTab, itemId, onDeleteSuccess }) => {
       case "servicios":
         return `https://oceandb-server.vercel.app/api/v1/servicios/delete/${id}`;
       case "servicio_reserva":
-        return `https://oceandb-server.vercel.app/api/v1/servicio_reserva/delete/${id}`;
+        return `https://oceandb-server.vercel.app/api/v1/servicios_reservas/delete/${id}`;
       case "facturas":
         console.warn("La eliminación de facturas no está permitida.");
         return null;
