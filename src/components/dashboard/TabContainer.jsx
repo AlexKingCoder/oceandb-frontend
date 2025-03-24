@@ -46,7 +46,7 @@ const TabContainer = () => {
         url = `https://oceandb-server.vercel.app/api/v1/servicios/search?page=${currentPage}&limit=${limit}`;
         break;
       case "servicio_reserva":
-        url = `https://oceandb-server.vercel.app/api/v1/servicio_reserva/search?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/servicios_reservas/search?page=${currentPage}&limit=${limit}`;
         break;
       case "facturas":
         url = `https://oceandb-server.vercel.app/api/v1/facturas/search?page=${currentPage}&limit=${limit}`;
