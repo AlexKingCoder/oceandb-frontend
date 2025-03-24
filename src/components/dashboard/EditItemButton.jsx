@@ -93,7 +93,7 @@ const EditItemButton = ({ activeTab, itemData, onEdit }) => {
         url = `https://oceandb-server.vercel.app/api/v1/servicios/update/${itemData.id}`;
         break;
       case "servicio_reserva":
-        url = `https://oceandb-server.vercel.app/api/v1/servicio_reserva/update/${itemData.id}`;
+        url = `https://oceandb-server.vercel.app/api/v1/servicios_reservas/update/${itemData.id}`;
         break;
       case "facturas":
         url = `https://oceandb-server.vercel.app/api/v1/facturas/update/${itemData.id}`;
