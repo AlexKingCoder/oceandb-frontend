@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "./DataTable";
 import CreateItemButton from "./CreateItemButton";
-import SearchBar from "./SearchBar"; // <- no olvides importarlo
+import SearchBar from "./SearchBar";
 import headerMappings from "../../context/headerMappings";
 import "../../styles/dashboard/tabContainer.scss";
 
@@ -11,7 +11,6 @@ const TabContainer = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [searchValues, setSearchValues] = useState({});
-  const [clearTrigger, setClearTrigger] = useState(false); // Forzar reinicio de los inputs
 
   const token = localStorage.getItem("token");
   if (!token) {
@@ -77,19 +76,10 @@ const TabContainer = () => {
     }
   };
 
-  const handleSearchChange = (field, value) => {
-    setSearchValues((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const handleClearFilters = () => {
-    setSearchValues({});
-    setClearTrigger((prev) => !prev); // Forzar reinicio de los inputs
-    fetchData(activeTab, page); // Vuelve a hacer la búsqueda sin filtros
-  };
-
-  const handleSearch = () => {
+  const handleSearch = (field, value) => {
     setPage(1);
-    fetchData(activeTab, 1, 20, searchValues); // Búsqueda con los filtros aplicados
+    const newSearchValues = value ? { [field]: value } : {};
+    setSearchValues(newSearchValues);
   };
 
   useEffect(() => {
@@ -137,22 +127,7 @@ const TabContainer = () => {
         ))}
       </div>
 
-      {/* Filtros */}
-      <div className="search-filters">
-        {Object.keys(headerMappings[activeTab] || {}).map((field) => (
-          <input
-            key={field}
-            type="text"
-            placeholder={`Buscar por ${field}`}
-            value={searchValues[field] || ""}
-            onChange={(e) => handleSearchChange(field, e.target.value)}
-          />
-        ))}
-        <button onClick={handleSearch}>Buscar</button>
-        <button onClick={handleClearFilters} style={{ marginLeft: "10px" }}>
-          Eliminar filtros
-        </button>
-      </div>
+      <SearchBar activeTab={activeTab} onSearch={handleSearch} />
 
       <CreateItemButton activeTab={activeTab} onCreate={onCreate} />
 
