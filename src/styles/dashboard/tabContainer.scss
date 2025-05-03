@@ -1,0 +1,138 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  opacity: 0.8;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+}
+
+.clientes {
+  background-color: #2196f3;
+  color: white;
+}
+
+.habitaciones {
+  background-color: #4caf50;
+  color: white;
+}
+
+.reservas {
+  background-color: #ff9800;
+  color: white;
+}
+
+.servicios {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.servicio_reserva {
+  background-color: #f4369b;
+  color: white;
+}
+
+.facturas {
+  background-color: #3f51b5;
+  color: white;
+}
+
+button.active {
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.search-filters input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-filters input:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+.search-filters button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: white;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-filters button:hover {
+  background-color: #1976d2;
+}
+
+.search-filters button:focus {
+  outline: none;
+}
+
+.search-filters button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  color: white;
+  background-color: #2196f3;
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}

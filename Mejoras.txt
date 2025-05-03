@@ -1,0 +1,7 @@
+1. Botón de crear centrado y con estilo diferente.
+
+2. Barra de búsqueda.
+
+3. Eliminar botones de edición y borrado en Facturas.
+
+4. Crear servicio_reserva no funciona.

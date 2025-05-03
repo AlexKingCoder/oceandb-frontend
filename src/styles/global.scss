@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+  }
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+  
+.cancel-button:hover {
+  background-color: #c0392b;
+}
+  
+.confirmation-button {
+  background-color: #4caf50;
+  color: white;
+}
+  
+.confirmation-button:hover {
+  background-color: #45a049;
+}
+
+.edit-btn {
+  &:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+  }
+}
+
+.delete-btn {
+  &:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+  }
+}
