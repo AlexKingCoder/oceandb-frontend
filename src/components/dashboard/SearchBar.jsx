@@ -14,11 +14,15 @@ const SearchBar = ({ activeTab, onSearch }) => {
     setSearchTerm("");
   }, [activeTab]);
 
-  const handleSearch = () => {
+  useEffect(() => {
+    // Realizar búsqueda automáticamente cuando cambie el término de búsqueda o el campo seleccionado
     if (selectedField && searchTerm.trim()) {
       onSearch(selectedField, searchTerm.trim());
+    } else if (!searchTerm.trim()) {
+      // Si el término de búsqueda está vacío, resetear la búsqueda
+      onSearch("", "");
     }
-  };
+  }, [searchTerm, selectedField, onSearch]);
 
   return (
     <div className="search-bar">
@@ -39,10 +43,7 @@ const SearchBar = ({ activeTab, onSearch }) => {
         placeholder="Buscar..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
       />
-
-      <button onClick={handleSearch}>Buscar</button>
     </div>
   );
 };
