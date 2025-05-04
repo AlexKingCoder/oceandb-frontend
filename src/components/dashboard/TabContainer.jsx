@@ -35,22 +35,22 @@ const TabContainer = () => {
     // Construcción de la URL con filtros (si existen)
     switch (tab) {
       case "clientes":
-        url = `https://oceandb-server.vercel.app/api/v1/clientes?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/clientes/search?page=${currentPage}&limit=${limit}`;
         break;
       case "habitaciones":
-        url = `https://oceandb-server.vercel.app/api/v1/habitaciones?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/habitaciones/search?page=${currentPage}&limit=${limit}`;
         break;
       case "reservas":
-        url = `https://oceandb-server.vercel.app/api/v1/reservas?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/reservas/search?page=${currentPage}&limit=${limit}`;
         break;
       case "servicios":
-        url = `https://oceandb-server.vercel.app/api/v1/servicios?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/servicios/search?page=${currentPage}&limit=${limit}`;
         break;
       case "servicio_reserva":
-        url = `https://oceandb-server.vercel.app/api/v1/servicio_reserva?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/servicio_reserva/search?page=${currentPage}&limit=${limit}`;
         break;
       case "facturas":
-        url = `https://oceandb-server.vercel.app/api/v1/facturas?page=${currentPage}&limit=${limit}`;
+        url = `https://oceandb-server.vercel.app/api/v1/facturas/search?page=${currentPage}&limit=${limit}`;
         break;
       default:
         console.error("La dirección de la petición no es válida.");
