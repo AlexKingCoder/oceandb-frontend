@@ -79,8 +79,8 @@ const TabContainer = () => {
   }, [activeTab]);
 
   useEffect(() => {
-    fetchData(activeTab, page, 20, searchValues);
-  }, [activeTab, page, searchValues]);
+    fetchData(activeTab, page, 20);
+  }, [activeTab, page]);
 
   const getHeaders = (tab) => Object.keys(headerMappings[tab] || {});
 
