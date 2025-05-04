@@ -32,7 +32,6 @@ const TabContainer = () => {
   const fetchData = async (tab, currentPage = 1, limit = 20, filters = {}) => {
     let url = "";
 
-    // Construcción de la URL con filtros (si existen)
     switch (tab) {
       case "clientes":
         url = `https://oceandb-server.vercel.app/api/v1/clientes/search?page=${currentPage}&limit=${limit}`;
